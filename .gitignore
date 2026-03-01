@@ -1,0 +1,79 @@
+############################
+# OS / Editor / General
+############################
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.pytest_cache/
+
+############################
+# Python
+############################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+############################
+# Environments
+############################
+env/
+venv/
+.venv/
+.env
+.env.*
+.python-version
+
+############################
+# Jupyter / Notebooks
+############################
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+############################
+# Data & Artifacts
+############################
+# Raw or large data (adjust as needed)
+data/*.parquet
+data/*.feather
+data/*.h5
+data/*.hdf5
+data/*.pickle
+data/*.pkl
+data/*.npz
+data/*.npy
+
+# Models and logs
+models/
+model_artifacts/
+logs/
+mlruns/
+
+############################
+# Docker / Cloud
+############################
+*.log
+*.tmp
+*.bak
+
+############################
+# Misc
+############################
+.coverage
+htmlcov/
+coverage.xml
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+
