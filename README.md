@@ -1,1 +1,1 @@
-# mlops-churn-pipeline
+# mlops-iris-pipeline
