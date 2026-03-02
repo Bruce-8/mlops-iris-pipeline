@@ -12,7 +12,7 @@ This project outlines a complete end-to-end MLOps pipeline for classifying the c
 
 ## System Architecture
 
-![MLOps Pipeline System Architecture](images/image.png)
+![MLOps Pipeline System Architecture](images/system-architecture.png)
 
 ## Key Features
 
@@ -58,7 +58,10 @@ pip install -r requirements.txt
 source .venv/bin/activate
 mlflow server --backend-store-uri sqlite:///mlflow.db
 ```
-In this step, open `http://localhost:5000` in your browser to view the MLflow UI.
+In this step, open `http://127.0.0.1:5000` in your browser to view the MLflow UI.
+
+![Mlflow Experiments](images/mlflow-experiments.png)
+![Mlflow Registry](images/mlflow-registry.png)
 
 3. In the original terminal, run:
 
@@ -127,7 +130,7 @@ We opted to run MLflow locally, which made it easy to log, track, and promote mo
 
 ### 2. Storing the raw Iris dataset locally
 Keeping the raw Iris dataset on the local filesystem simplified preprocessing and experimentation.  
-**Tradeoff:** We did not leverage DVC for remote storage, which could have improved reproducibility and collaboration.
+**Tradeoff:** We did not leverage DVC for remote storage, which could have improved reproducibility and collaboration. We also had trouble with `dvc repro` as we needed git to track the raw csv file.
 
 ## Acknowledgements
 
