@@ -1,4 +1,49 @@
-############################
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+venv.bak/
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+coverage.xml
+.coverage
+
+# Build / packaging
+dist/
+build/
+*.egg-info/
+
+# MLOps / MLFlow
+mlruns/
+mlflow.db
+
+# Local model artifacts and caches
+training/logistic_regression_model/
+src/training/logistic_regression_model/
+**/model_outputs/
+
+# Misc
+.env
+*.sqlite
+*.db
+.trash/############################
 # OS / Editor / General
 ############################
 .DS_Store
