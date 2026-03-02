@@ -20,7 +20,7 @@ This project outlines a complete end-to-end MLOps pipeline for classifying the c
   Cleaned, scaled, and trained multiple logistic regression models on the Iris dataset.
 
 - **DVC (Data Version Control)**  
-  Manages dataset and model versioning, ensuring reproducibility across experiments.
+  Manages dataset (processed) and model versioning, ensuring reproducibility across experiments. This is mainly done through defining a pipeline in `dvc.yaml`.
 
 - **MLflow Integration**  
   Tracks experiments, metrics, and model versions; automatically promotes the “best” model.
@@ -131,7 +131,7 @@ We opted to run MLflow locally, which made it easy to log, track, and promote mo
 
 ### 2. Storing the raw Iris dataset locally
 Keeping the raw Iris dataset on the local filesystem simplified preprocessing and experimentation.  
-**Tradeoff:** We did not leverage DVC for remote storage, which could have improved reproducibility and collaboration. We also had trouble with `dvc repro` as we needed git to track the raw csv file.
+**Tradeoff:** We did not leverage DVC for remote storage, which could have improved reproducibility and collaboration. We therefore couldn't track that raw dataset using DVC.
 
 ## Acknowledgements
 
