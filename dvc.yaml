@@ -1,0 +1,19 @@
+stages:
+  preprocess:
+    cmd: jupyter nbconvert --to notebook --execute --inplace src/preprocess/iris_preprocess.ipynb
+    deps:
+      - data/iris.csv
+      - src/preprocess/iris_preprocess.ipynb
+    outs:
+      - src/processed_data/iris_cleaned.csv
+
+  train:
+    cmd: jupyter nbconvert --to notebook --execute --inplace src/training/train_logistic_regression.ipynb
+    deps:
+      - src/processed_data/iris_cleaned.csv
+      - src/training/train_logistic_regression.ipynb
+
+  evaluate:
+    cmd: python src/model_evaluation/evaluate_models.py
+    deps:
+      - src/model_evaluation/evaluate_models.py
