@@ -22,7 +22,7 @@ jobs:
 
       # 3. Run tests inside Docker
       - name: Run tests
-        run: docker run --rm my-fastapi-app pytest -q
+        run: docker run --rm my-fastapi-app pytest /tests
 
   # --------------------
   # Continuous Deployment

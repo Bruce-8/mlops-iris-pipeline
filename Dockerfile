@@ -15,6 +15,7 @@ RUN pip install -r /requirements.txt
 
 # Copy source code
 COPY /app /app
+COPY tests /tests
 WORKDIR /app
 
 # Default port; Render provides $PORT env var at runtime
