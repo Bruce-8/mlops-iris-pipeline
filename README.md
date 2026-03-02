@@ -74,6 +74,7 @@ bash run_mlops_pipeline.sh
 1. Run the app to start up the server:
 
 ```bash
+source .venv/bin/activate
 fastapi dev app/main.py
 ```
 You can access the server at `http://127.0.0.1:8000`.
