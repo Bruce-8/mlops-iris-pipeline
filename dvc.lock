@@ -11,25 +11,25 @@ stages:
       isexec: true
     - path: src/preprocess/iris_preprocess.ipynb
       hash: md5
-      md5: b839607ed8040eeff5c14cbf508be5bd
-      size: 14270
+      md5: 8ec9e3eefed70f8fee1ff12f56078106
+      size: 12194
     outs:
     - path: src/processed_data/iris_cleaned.csv
       hash: md5
-      md5: 2aa99917d6776368782402a3b32b1344
-      size: 11829
+      md5: f14cc08be1d728fe005ca1b0d34fc978
+      size: 2704
   train:
     cmd: jupyter nbconvert --to notebook --execute --inplace 
       src/training/train_logistic_regression.ipynb
     deps:
     - path: src/processed_data/iris_cleaned.csv
       hash: md5
-      md5: 2aa99917d6776368782402a3b32b1344
-      size: 11829
+      md5: f14cc08be1d728fe005ca1b0d34fc978
+      size: 2704
     - path: src/training/train_logistic_regression.ipynb
       hash: md5
-      md5: b5fc4d96b03f3157ab1e4b6652c16aec
-      size: 14489
+      md5: b594409f0e57d7f1951bf2b307bf3fb0
+      size: 14862
   evaluate:
     cmd: python src/model_evaluation/evaluate_models.py
     deps:

@@ -36,7 +36,7 @@ mlflow.db
 
 # Local model artifacts and caches
 training/logistic_regression_model/
-src/training/logistic_regression_model/
+src/training/mlruns/
 **/model_outputs/
 
 # Misc
