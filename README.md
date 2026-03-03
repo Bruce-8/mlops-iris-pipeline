@@ -136,8 +136,3 @@ Keeping the raw Iris dataset on the local filesystem simplified preprocessing an
 ## Acknowledgements
 
 We got the dataset from [the UCI Machine Learning Repository – Iris Dataset](https://archive.ics.uci.edu/dataset/53/iris).
-
-## License
-
-This project is provided as an example; add a license file if you
-intend to distribute it.
